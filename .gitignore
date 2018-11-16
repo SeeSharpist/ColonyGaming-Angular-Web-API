@@ -235,3 +235,15 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+
+node_modules
+/npm-debug.log
+.env
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+settings.json
+wwwroot/*
