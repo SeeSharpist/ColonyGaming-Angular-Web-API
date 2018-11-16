@@ -22,4 +22,5 @@ namespace contact_app
                 .UseStartup<Startup>()
                 .Build();
     }
+        
 }

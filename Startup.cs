@@ -12,6 +12,9 @@ using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using contact_app.Models;
 using System.IO;
+using TwitchLib;
+using TwitchLib.Api.Interfaces;
+using TwitchLib.Api;
 
 namespace contact_app
 {
@@ -28,9 +31,13 @@ namespace contact_app
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ContactAppContext>(options =>
-       options.UseSqlServer(Configuration.GetConnectionString("ContactDb")));
+            options.UseSqlServer(Configuration.GetConnectionString("ContactDb")));
 
             services.AddMvc();
+            var api = new TwitchAPI();
+            api.Settings.ClientId = "";
+            api.Settings.AccessToken = "";
+            services.AddSingleton<ITwitchAPI>(api);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
