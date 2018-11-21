@@ -10,12 +10,19 @@ import { AppMaterialModule } from './app.material.module';
 import { ContactformComponent } from './contactform/contactform.component';
 import { ContactlistComponent } from './contactlist/contactlist.component';
 import { ContactService } from './services/contact.service';
+import { HomeComponent } from './home/home.component';
+
+// Import ngx-twitter-timeline
+import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
+import { TwitterFeedComponent } from './twitter-feed/twitter-feed.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactformComponent,
-    ContactlistComponent
+    ContactlistComponent,
+    HomeComponent,
+    TwitterFeedComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +32,8 @@ import { ContactService } from './services/contact.service';
     FormsModule,
     ReactiveFormsModule,
     LayoutModule,
-    Routing
+    Routing,
+    NgxTwitterTimelineModule.forRoot()
   ],
   providers: [ContactService],
   bootstrap: [AppComponent]
