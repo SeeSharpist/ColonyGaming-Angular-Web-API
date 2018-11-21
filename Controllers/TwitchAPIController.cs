@@ -52,6 +52,21 @@ namespace ColonyGaming_Angular_Web_API.Controllers
             }
             return new ObjectResult(item);
         }
+
+        [HttpGet()]
+        [Route("community-followers")]
+        public async Task<IActionResult> GetColonyFollowers()
+        {
+            var channel = await Task.Run(() => _api.V5.Users.GetUserByNameAsync("GeekTekRob"));
+            var followers = await Task.Run(() => _api.V5.Users.GetUserFollowsAsync(channel.Matches[0].Id));
+            // filter contact records by contact id
+            //var item = _context.Contact.FirstOrDefault(t => t.id == id);
+            if (followers == null)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(followers);
+        }
 /* 
         [HttpGet]
         [Route("getAllContact")]

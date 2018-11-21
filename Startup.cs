@@ -35,8 +35,8 @@ namespace contact_app
 
             services.AddMvc();
             var api = new TwitchAPI();
-            api.Settings.ClientId = "";
-            api.Settings.AccessToken = "";
+            api.Settings.ClientId = "vc070fy7amdldage4gti7b58jc789c";
+            api.Settings.AccessToken = "w8wbwnzg7kp529umgtmgqzdui0twmk";
             services.AddSingleton<ITwitchAPI>(api);
         }
 

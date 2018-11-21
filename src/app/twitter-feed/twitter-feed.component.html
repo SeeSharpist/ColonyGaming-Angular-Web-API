@@ -1,4 +1,9 @@
-<ngx-twitter-timeline 
-    [data]="{sourceType: 'url', url: 'https://twitter.com/twitterdev'}"
-    [opts]="{tweetLimit: 5}"
-></ngx-twitter-timeline>
+<mat-card>
+    <mat-card-title>The Colony Twitter Feed</mat-card-title>
+    <mat-card-content>
+      <ngx-twitter-timeline 
+          [data]="{sourceType: 'url', url: 'https://twitter.com/thecolonygaming'}"
+          [opts]="{tweetLimit: 10}"
+      ></ngx-twitter-timeline>
+  </mat-card-content>
+</mat-card>
