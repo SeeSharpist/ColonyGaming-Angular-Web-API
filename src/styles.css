@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-body { 
+/**body { 
   font-family: Roboto, Arial, sans-serif;
   margin: 0;
 }
@@ -13,7 +13,7 @@ body {
 .version-info {
   font-size: 8pt;
   float: right;
-}
+}**/
 
 body {    
   background-color: #000000;
@@ -25,8 +25,19 @@ a {
   color: #b300b3;
 }
 
+.bg-light{
+  background-color: #f8f9fa!important;
+}
+
 .row {
   margin-right: 0;
+}
+
+/** TOOLBARS **/
+.fill-remaining-space {
+  /*This fills the remaining space, by using flexbox.  
+ Every toolbar row uses a flexbox row layout. */
+ flex: 1 1 auto;
 }
 
 /** FOOTER **/

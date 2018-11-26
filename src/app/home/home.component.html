@@ -15,5 +15,29 @@
   </div>
 </div>
 <div>
-  <app-twitter-feed></app-twitter-feed>
+  <div>
+      <mat-grid-list cols="3" rowHeight="1:1">
+          <mat-grid-tile>
+              <mat-card>
+                  <mat-card-title>Cool Tile 1</mat-card-title>
+                  <mat-card-content>
+                    Stuff and things
+                </mat-card-content>
+              </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile>
+              <mat-card>
+                  <mat-card-title>Cool Tile 2</mat-card-title>
+                  <mat-card-content>
+                    Stuff and things again
+                </mat-card-content>
+              </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <app-twitter-feed></app-twitter-feed>
+          </mat-grid-tile>
+        </mat-grid-list>
+    
+  </div>
+  
 </div>

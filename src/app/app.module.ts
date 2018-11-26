@@ -30,7 +30,8 @@ import { SocialService } from './services/social.service';
     HomeComponent,
     TwitterFeedComponent,
     NavbarComponent,
-    SocialListComponent
+    SocialListComponent,
+
   ],
   imports: [
     BrowserModule,
