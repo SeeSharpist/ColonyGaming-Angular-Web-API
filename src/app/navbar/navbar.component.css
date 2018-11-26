@@ -1,0 +1,22 @@
+/** NAVBAR CSS **/
+.navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
+    font-size: 2rem;
+}
+
+.navbar-brand > img {
+    min-height: 70px;
+}
+
+#navbarSupportedContent > ul > li.nav-item {
+    padding-right: 25px;
+}
+#navbarSupportedContent > ul > li.nav-item > a {
+    font-size: 1.25rem;
+}
+
+.active {
+    font-weight: bolder;
+}

@@ -14,3 +14,182 @@ body {
   font-size: 8pt;
   float: right;
 }
+
+body {    
+  background-color: #000000;
+  font-family: 'Oswald', sans-serif;
+  height: 100%;
+}
+
+a {
+  color: #b300b3;
+}
+
+.row {
+  margin-right: 0;
+}
+
+/** FOOTER **/
+.footer {
+  padding: 1rem 0;
+  margin-top: auto;
+  background-color: #f5f5f5;
+}
+
+/** PAGES **/
+.pageheader {
+  background-image: url("/assets/images/backgrounds/spaceheader.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  border-bottom: #CCCCCC 1px solid;
+  color: #FFFFFF; 
+  margin-bottom: 0rem;
+}
+
+h1.display-4 > small {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.btn-warning:hover {
+  background-color: #ff9900;
+}
+
+.pagecontent {
+  background-color: #CCCCCC;
+  padding: 2%;
+  overflow: hidden;
+  border-bottom: #CCCCCC 1px solid;
+  color: #333333;
+}
+
+/** BUTTONS **/
+.ds-btn li{
+  list-style: none;
+  float: center;
+  padding: 10px;
+}
+.ds-btn a span {
+  padding-left: 15px;
+  padding-right: 5px;
+  width: 100%;
+  display: inline-block;
+  text-align: left;
+  font-size: 2rem;
+}
+
+/** SOCIAL BUTTON CSS **/
+.discord
+{
+  color: #6441a5;
+}
+.discord:hover
+{
+  color: #7e5bbe;
+}
+.facebook
+{
+  color: #3b5998;
+}
+.facebook:hover
+{
+  color: #4c70ba;
+}
+.github
+{
+  color: #4183c4;
+}
+.github:hover
+{
+  color: #689cd0;
+}
+.instagram
+{
+  color: #3f729b;
+}
+.instagram:hover
+{
+  color: #548cb9;
+}
+.paypal
+{
+  color: #253b80;
+}
+.paypal:hover
+{
+  color: #304da8;
+}
+.steam
+{
+  color: #7da10e;
+}
+.steam:hover
+{
+  color: #a1d012;
+}
+.twitch
+{
+  color: #6441a5;
+}
+.twitch:hover
+{
+  color: #7e5bbe;
+}
+.twitter
+{
+  color: #55acee;
+}
+.twitter:hover
+{
+  color: #83c3f3;
+}
+.youtube
+{
+  color: #e52d27;
+}
+.youtube:hover
+{
+  color: #ea5955;
+}
+.email
+{
+  color: #44c456;
+}
+.email:hover
+{
+  color: #6bd079;
+}
+
+/* SPINNING CARDS */
+.icon-spin-flex {
+  display:inline-flex;
+}
+
+.icon-spin {
+  margin:0 auto;
+  padding:0;
+  display: inline-block;
+}
+.icon-spin li {
+  list-style:none;
+  float:left;
+}
+.icon-spin li a {
+  display:block;
+  margin:0 10px;
+  font-size:20px;
+  transition:0.5s;
+  text-align:center;
+}
+.icon-spin li:hover a {
+  color:#FFA500;
+  transform:rotateY(360deg);
+}
+
+/* HEADING */
+.group-heading {
+  font-size: 2.5rem;
+  color:#b300b3;
+}

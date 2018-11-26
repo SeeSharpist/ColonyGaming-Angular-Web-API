@@ -9,12 +9,18 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { AppMaterialModule } from './app.material.module';
 import { ContactformComponent } from './contactform/contactform.component';
 import { ContactlistComponent } from './contactlist/contactlist.component';
-import { ContactService } from './services/contact.service';
+
 import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SocialListComponent } from './social-list/social-list.component';
 
 // Import ngx-twitter-timeline
 import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 import { TwitterFeedComponent } from './twitter-feed/twitter-feed.component';
+
+//Import Services
+import { ContactService } from './services/contact.service';
+import { SocialService } from './services/social.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,9 @@ import { TwitterFeedComponent } from './twitter-feed/twitter-feed.component';
     ContactformComponent,
     ContactlistComponent,
     HomeComponent,
-    TwitterFeedComponent
+    TwitterFeedComponent,
+    NavbarComponent,
+    SocialListComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +43,10 @@ import { TwitterFeedComponent } from './twitter-feed/twitter-feed.component';
     Routing,
     NgxTwitterTimelineModule.forRoot()
   ],
-  providers: [ContactService],
+  providers: [
+    ContactService,
+    SocialService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

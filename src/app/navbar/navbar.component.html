@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/">
+      <img src="/assets/images/logo/TheColonyLogo_navbar.png" alt="The Colony Logo" height="50px">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto" >
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/colonists" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">The Colonists</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/playlist" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Our Playlist</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/joinus" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Join Us</a>
+      </li>
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Image Gallery
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Logos</a>
+          <a class="dropdown-item" href="#">Posters</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Misc</a>
+        </div>
+      </li> -->
+    </ul>
+    <!-- <app-social-bar></app-social-bar> -->
+    <app-social-list></app-social-list>
+  </div>
+  
+</nav>
