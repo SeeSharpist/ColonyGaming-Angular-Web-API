@@ -1,0 +1,74 @@
+<div class="jumbotron pageheader">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-12 col-lg-12">
+              <h1 class="display-4">
+                  The Colonists<br><small>Check out our wonderful fellow Colonists and their great content.</small></h1>
+          </div>
+      </div>
+  </div>
+</div>
+<div>
+  <mat-grid-list cols="3" rowHeight="1:1">
+      <mat-grid-tile>
+          <mat-card>
+              <mat-card-title>Administrator</mat-card-title>
+              <mat-card-content>
+                Stuff and things
+            </mat-card-content>
+          </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+          <mat-card>
+              <mat-card-title>Head Troll</mat-card-title>
+              <mat-card-content>
+                Stuff and things again
+            </mat-card-content>
+          </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card>
+          <mat-card-title>Streamer Spotlight</mat-card-title>
+          <mat-card-content>
+            Stuff and things again
+        </mat-card-content>
+      </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+</div>
+<div>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <img matListAvatar src="https://static-cdn.jtvnw.net/jtv_user_pictures/ab51dea1-512f-468f-a5e7-d79dffa9101b-profile_image-300x300.png" alt="...">
+          SeeSharpist
+        </mat-panel-title>
+        <mat-panel-description>
+          Type your name and age
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <mat-form-field>
+        <input matInput placeholder="First name">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput placeholder="Age">
+      </mat-form-field>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Self aware panel
+        </mat-panel-title>
+        <mat-panel-description>
+          Currently I am {{panelOpenState ? 'open' : 'closed'}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>I'm visible because I am open</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

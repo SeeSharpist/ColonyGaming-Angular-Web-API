@@ -21,6 +21,7 @@ import { TwitterFeedComponent } from './twitter-feed/twitter-feed.component';
 //Import Services
 import { ContactService } from './services/contact.service';
 import { SocialService } from './services/social.service';
+import { ColonistsComponent } from './colonists/colonists.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SocialService } from './services/social.service';
     TwitterFeedComponent,
     NavbarComponent,
     SocialListComponent,
+    ColonistsComponent,
 
   ],
   imports: [
