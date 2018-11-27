@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace contact_app.Models
+namespace ColonyGaming_Angular_Web_API.Models
 {
     public class ContactAppContext : DbContext
     {

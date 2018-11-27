@@ -9,7 +9,7 @@
   </div>
 </div>
 <div>
-  <mat-grid-list cols="3" rowHeight="1:1">
+  <mat-grid-list cols="3" rowHeight="3:1">
       <mat-grid-tile>
           <mat-card>
               <mat-card-title>Administrator</mat-card-title>
@@ -37,38 +37,97 @@
     </mat-grid-list>
 
 </div>
+<mat-divider></mat-divider>
 <div>
-  <mat-accordion>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <img matListAvatar src="https://static-cdn.jtvnw.net/jtv_user_pictures/ab51dea1-512f-468f-a5e7-d79dffa9101b-profile_image-300x300.png" alt="...">
-          SeeSharpist
-        </mat-panel-title>
-        <mat-panel-description>
-          Type your name and age
-        </mat-panel-description>
-      </mat-expansion-panel-header>
+    <div class="spinner" *ngIf="loadingState; else colonistlist">
+        <mat-spinner></mat-spinner>
+    </div>
+    <ng-template class="colonistlist" #colonistlist>
+        <mat-grid-list cols="5" rowHeight="1:1">
+            <mat-grid-tile colspan="1" *ngFor="let colonist of colonistList">
+                <mat-card>
+                    <img mat-card-image src="{{colonist.avatar}}" alt="{{colonist.name}}">
+                    <mat-card-header>
+                        <!--<div mat-card-avatar class="example-header-image"></div>-->
+                        <mat-card-title>{{colonist.name}}</mat-card-title>
+                        <mat-card-subtitle>{{colonist.game}}</mat-card-subtitle>
+                        <span class="fill-remaining-space"></span>
+                        <span class="youtube"><span>{{colonist.viewerCount}}</span><mat-icon>visibility</mat-icon></span>
+                      </mat-card-header>
+                    <mat-card-content>
+                      <p>
+                        {{colonist.status}}
+                      </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <a class="card-button twitch" mat-flat-button href="{{colonist.urlpath}}">VIEW</a>
+                      
+                    </mat-card-actions>
+                  </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    <!--<mat-grid-list cols="5" rowHeight="1:1">
+        <mat-grid-tile colspan="1">
+            
+        </mat-grid-tile>
+
+        <mat-grid-tile colspan="3">
+            <mat-card>
+                <mat-card-title>Check out #Colonists live streaming right now!</mat-card-title>
+                <mat-card-content>
+                  <mat-list class="live-list">
+                    <a mat-list-item *ngFor="let colonist of colonistList" href="{{colonist.urlpath}}">
+                        <img matListAvatar src="{{colonist.avatar}}" alt="...">
+                        <h3 matLine> {{colonist.name}} </h3>
+                        <p matLine>
+                          <span> {{colonist.status}} </span>
+                          <span class="demo-2"> -- {{colonist.viewerCount}} </span>
+                        </p>
+                      </a>
+                    </mat-list>
+                </mat-card-content>
+              </mat-card>
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        
+                      <img class="mat-list-avatar" src="https://static-cdn.jtvnw.net/jtv_user_pictures/ab51dea1-512f-468f-a5e7-d79dffa9101b-profile_image-300x300.png" alt="...">
+                      SeeSharpist
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Type your name and age
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+              
+                  <mat-form-field>
+                    <input matInput placeholder="First name">
+                  </mat-form-field>
+              
+                  <mat-form-field>
+                    <input matInput placeholder="Age">
+                  </mat-form-field>
+                </mat-expansion-panel>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Self aware panel
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>I'm visible because I am open</p>
+                </mat-expansion-panel>
+              </mat-accordion>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1">
+          
+        </mat-grid-tile>
+      </mat-grid-list>-->
+
+    </ng-template>
   
-      <mat-form-field>
-        <input matInput placeholder="First name">
-      </mat-form-field>
   
-      <mat-form-field>
-        <input matInput placeholder="Age">
-      </mat-form-field>
-    </mat-expansion-panel>
-    <mat-expansion-panel (opened)="panelOpenState = true"
-                         (closed)="panelOpenState = false">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Self aware panel
-        </mat-panel-title>
-        <mat-panel-description>
-          Currently I am {{panelOpenState ? 'open' : 'closed'}}
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <p>I'm visible because I am open</p>
-    </mat-expansion-panel>
-  </mat-accordion>
 </div>

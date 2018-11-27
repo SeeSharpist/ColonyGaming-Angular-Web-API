@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace contact_app
+namespace ColonyGaming_Angular_Web_API
 {
     public class Program
     {

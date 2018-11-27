@@ -13,6 +13,7 @@ import { ContactlistComponent } from './contactlist/contactlist.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SocialListComponent } from './social-list/social-list.component';
+import { ColonistsComponent } from './colonists/colonists.component';
 
 // Import ngx-twitter-timeline
 import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
@@ -21,7 +22,7 @@ import { TwitterFeedComponent } from './twitter-feed/twitter-feed.component';
 //Import Services
 import { ContactService } from './services/contact.service';
 import { SocialService } from './services/social.service';
-import { ColonistsComponent } from './colonists/colonists.component';
+import { ColonistService } from './services/colonist.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ColonistsComponent } from './colonists/colonists.component';
   ],
   providers: [
     ContactService,
-    SocialService
+    SocialService,
+    ColonistService
   ],
   bootstrap: [AppComponent]
 })

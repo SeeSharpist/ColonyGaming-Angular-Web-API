@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using contact_app.Models;
+using ColonyGaming_Angular_Web_API.Models;
 using Microsoft.AspNetCore.Mvc;
 using TwitchLib.Api;
 using TwitchLib.Api.Interfaces;
@@ -66,6 +66,83 @@ namespace ColonyGaming_Angular_Web_API.Controllers
                 return NotFound();
             }
             return new ObjectResult(followers);
+        }
+
+        [HttpGet()]
+        [Route("getAllColonists")]
+        public async Task<IActionResult> GetColonyStreamerInfos()
+        {
+            var channel = await Task.Run(() => _api.V5.Users.GetUserByNameAsync("SeeSharpist"));
+            var followers = await Task.Run(() => _api.V5.Users.GetUserFollowsAsync(channel.Matches[0].Id));
+            foreach(var user in followers.Follows){
+                Colonist c = new Colonist(){
+                    id = user.Channel.Id,
+                    name = user.Channel.DisplayName,
+                    avatar =user.Channel.Logo,
+                    urlpath = user.Channel.Url,
+                    game = user.Channel.Game,
+                    //status = ,
+                    //viewerCount = ,
+                    //isLive = ,
+
+                };
+                
+            }
+            //var streams = await Task.Run(() => _api.V5.Streams.GetFollowedStreamsAsync(channel.Matches[0].Id));
+            //List<Colonist> 
+            // filter contact records by contact id
+            //var item = _context.Contact.FirstOrDefault(t => t.id == id);
+            if (followers == null)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(followers);
+        }
+
+        [HttpGet()]
+        [Route("getAllLiveColonists")]
+        public async Task<IActionResult> GetColonyLiveStreamerInfos()
+        {   
+            int page = 100;
+            
+            int followCount = 0;
+            int callCount = 0;
+            List<string> channelIds = new List<string>();
+            List<Colonist> members = new List<Colonist>();
+            var channel = await Task.Run(() => _api.V5.Users.GetUserByNameAsync("SeeSharpist"));
+            var followers = await Task.Run(() => _api.V5.Users.GetUserFollowsAsync(channel.Matches[0].Id, page));
+            callCount = 1;
+            followCount = followers.Total;
+            while(followCount > 0){
+                foreach(var user in followers.Follows){
+                    channelIds.Add(user.Channel.Id);
+                }
+                followCount -= page;
+                followers = await Task.Run(() => _api.V5.Users.GetUserFollowsAsync(channel.Matches[0].Id, page, callCount * page));
+                callCount++;
+            }
+            
+            var streams = await Task.Run(() => _api.V5.Streams.GetLiveStreamsAsync(channelIds));
+            foreach(var stream in streams.Streams){
+                Colonist c = new Colonist(){
+                    id = stream.Channel.Id,
+                    name = stream.Channel.DisplayName,
+                    avatar =stream.Channel.Logo,
+                    urlpath = stream.Channel.Url,
+                    game = stream.Channel.Game,
+                    status = stream.Channel.Status,
+                    viewerCount = stream.Viewers,
+                    isLive = true
+
+                };
+                members.Add(c);
+            }
+
+            if (members == null)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(members);
         }
 /* 
         [HttpGet]

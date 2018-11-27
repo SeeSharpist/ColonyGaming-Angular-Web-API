@@ -10,13 +10,13 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
-using contact_app.Models;
+using ColonyGaming_Angular_Web_API.Models;
 using System.IO;
 using TwitchLib;
 using TwitchLib.Api.Interfaces;
 using TwitchLib.Api;
 
-namespace contact_app
+namespace ColonyGaming_Angular_Web_API
 {
     public class Startup
     {

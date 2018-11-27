@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 using System.Collections.Generic;
 
-namespace contactapp.Migrations
+namespace ColonyGaming_Angular_Web_API.Migrations
 {
     public partial class InitialCreate : Migration
     {

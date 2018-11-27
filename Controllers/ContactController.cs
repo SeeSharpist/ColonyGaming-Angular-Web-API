@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using contact_app.Models;
+using ColonyGaming_Angular_Web_API.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace contact_app.Controllers
+namespace ColonyGaming_Angular_Web_API.Controllers
 {
     // set route attribute to make request as 'api/contact'
     [Route("api/[controller]")]

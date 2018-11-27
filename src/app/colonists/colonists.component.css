@@ -1,0 +1,34 @@
+.spinner{
+    /**top: 45%;**/
+    left: 47%;
+    position: fixed;
+    margin-top: 10px;
+
+  }
+  .live-list {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 1200px;
+    height: 350px;
+    overflow: auto;
+    margin: 0 auto;
+  }
+  mat-grid-tile{
+      padding:10px;
+  }
+  mat-divider{
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card-button{
+    width:100%;
+    color: white;
+    background-color: #6441a5;
+}
+
+mat-card{
+    max-width:300px;
+}
