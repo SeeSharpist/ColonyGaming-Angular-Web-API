@@ -5,6 +5,21 @@
     margin-top: 10px;
 
   }
+  .colonist-card {
+    max-width: 400px;
+    height: 99%;
+    text-align: center;
+
+  }
+  
+  .colonist-header-image {
+    /**background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');**/
+    background-size: cover;
+  }
+  .mat-card-subtitle{
+      text-align: left;
+  }
+  /**
   .live-list {
     display: flex;
     flex-direction: column;
@@ -18,10 +33,10 @@
       padding:10px;
   }
   mat-divider{
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 .card-button{
     width:100%;
@@ -36,3 +51,20 @@ mat-card{
 .colonistlist > .mat-card-header-text{
     margin-left:0px;
 }
+
+.colonist-card {
+    max-width: 300px;
+  }
+  
+  .colonist-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .mat-fab{
+    margin-top: -23%;
+    margin-left: 75%;
+    display: inherit;
+    color: white;
+    background-color: #6441a5;
+  }**/

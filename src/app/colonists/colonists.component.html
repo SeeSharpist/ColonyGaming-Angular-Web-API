@@ -43,26 +43,28 @@
         <mat-spinner></mat-spinner>
     </div>
     <ng-template class="colonistlist" #colonistlist>
-        <mat-grid-list cols="5" rowHeight="500px" gutterSize="15px">
+        <mat-grid-list cols="5" rowHeight="500px" gutterSize="10px">
             <mat-grid-tile colspan="1" *ngFor="let colonist of colonistList">
-                <mat-card>
-                    <img mat-card-image src="{{colonist.avatar}}" alt="{{colonist.name}}">
+                <mat-card class="colonist-card">
+                    <img mat-card-image class="colonist-header-image" src="{{colonist.avatar}}" alt="{{colonist.name}}">
                     <mat-card-header>
-                        <!--<div mat-card-avatar class="example-header-image"></div>-->
-                        <mat-card-title>{{colonist.name}}</mat-card-title>
-                        <mat-card-subtitle><mat-icon>gamepad</mat-icon>{{colonist.game}}</mat-card-subtitle>
+                        <mat-card-subtitle>{{colonist.game}}</mat-card-subtitle>
                         <span class="fill-remaining-space"></span>
                         <span class="youtube"><span>{{colonist.viewerCount}}</span><mat-icon>visibility</mat-icon></span>
+                        <mat-card-title>{{colonist.name}}</mat-card-title>
+                        
+                        
+                        
                       </mat-card-header>
                     <mat-card-content>
                       <p>
                         {{colonist.status}}
                       </p>
                     </mat-card-content>
-                    <mat-card-actions>
+                    <mat-card-footer>
                       <a class="card-button twitch" mat-flat-button href="{{colonist.urlpath}}">VIEW</a>
-                      
-                    </mat-card-actions>
+                    
+                    </mat-card-footer>
                   </mat-card>
             </mat-grid-tile>
         </mat-grid-list>
