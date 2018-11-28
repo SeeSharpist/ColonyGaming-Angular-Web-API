@@ -23,6 +23,8 @@ import { TwitterFeedComponent } from './twitter-feed/twitter-feed.component';
 import { ContactService } from './services/contact.service';
 import { SocialService } from './services/social.service';
 import { ColonistService } from './services/colonist.service';
+import { TestComponent } from './test/test.component';
+import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { ColonistService } from './services/colonist.service';
     NavbarComponent,
     SocialListComponent,
     ColonistsComponent,
+    TestComponent,
 
   ],
   imports: [
@@ -45,7 +48,12 @@ import { ColonistService } from './services/colonist.service';
     ReactiveFormsModule,
     LayoutModule,
     Routing,
-    NgxTwitterTimelineModule.forRoot()
+    NgxTwitterTimelineModule.forRoot(),
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [
     ContactService,

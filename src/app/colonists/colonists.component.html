@@ -43,7 +43,7 @@
         <mat-spinner></mat-spinner>
     </div>
     <ng-template class="colonistlist" #colonistlist>
-        <mat-grid-list cols="5" rowHeight="500px" gutterSize="10px">
+        <mat-grid-list cols="5" md-cols-sm="1" rowHeight="500px" gutterSize="10px">
             <mat-grid-tile colspan="1" *ngFor="let colonist of colonistList">
                 <mat-card class="colonist-card">
                     <img mat-card-image class="colonist-header-image" src="{{colonist.avatar}}" alt="{{colonist.name}}">
